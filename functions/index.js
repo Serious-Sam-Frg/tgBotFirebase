@@ -21,33 +21,6 @@ bot.help((ctx) => ctx.reply("Send me a sticker"));
 bot.on(message("sticker"), (ctx) => ctx.reply("👍"));
 bot.hears("hi", (ctx) => ctx.reply("Hey there"));
 
-// bot.on(message("text"), async (ctx) => {
-//   await ctx.sendMessage("👍");
-// });
-
-// exports.sendMessage = functions.https.onRequest((request, response) => {
-//   cors(request, response, () => {
-//     const text = request.query.message;
-//     const chatId = request.query.chatId;
-    
-//     if (!text || !chatId) {
-//       return response.status(400).send("No message or chatId provided");
-//     }
-//     // Ваш Telegram chat_id
-//     bot.telegram.sendMessage(chatId, decodeURIComponent(text))
-//       .then(() => {
-//         return response.status(200).send("Message sent");
-//       })
-//       .catch(error => {
-//         console.error(error);
-//         return response.status(500).send("Failed to send message");
-//       });
-//   });
-// });
-
-// bot.launch();
-
-
 bot.on('text', (ctx) => {
   ctx.reply("👍");
 });
